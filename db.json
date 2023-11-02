@@ -1,0 +1,208 @@
+[
+  {
+    "ref": "f2a8679e-8b6a-4509-b3a2-d164fe7696b1",
+    "keyword": "181b2d972f6347ba740fe577fb4cc0ff",
+    "answer": "Buenas",
+    "options": {},
+    "from": "5493854870516",
+    "refSerialize": "2df4a1753a951bb77b66edc9f2bb7e76"
+  },
+  {
+    "ref": "ans_f114c593-7743-44ed-bf97-f6409fd06db1",
+    "keyword": "key_b2b2b1a4-3198-48f1-b455-87f3243f0722",
+    "answer": "🌟 Bienvenido a Rayuela 360\n🤔 ¿Qué servicio te gustaría obtener más información?",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "c46a8f713a92f5da81aadbfd1600a584",
+    "from": "5493854870516"
+  },
+  {
+    "ref": "ans_7569865c-6fdb-41e4-a797-6b670f8db8dc",
+    "keyword": "ans_f114c593-7743-44ed-bf97-f6409fd06db1",
+    "answer": "Escribe que es lo que te estaria interesando",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 3000,
+      "idle": null,
+      "ref": null,
+      "nested": [
+        {
+          "ref": "key_3df31fc3-6ccd-4c53-8a63-658b2b374aea",
+          "keyword": [
+            "plataforma360",
+            "plataforma"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "64cf1dce9927f59a4e05e84d38b00533"
+        },
+        {
+          "ref": "ans_75a18b26-97ca-48e9-b900-a4e48e23153c",
+          "keyword": "key_3df31fc3-6ccd-4c53-8a63-658b2b374aea",
+          "answer": "Rayuela 360\nPlataforma de vídeo!!\n* Servicio de 2 hs.\n* Camara alta calidad\n* Videos cortos especial redes sociales.\n* Videos ilimitados.\n* Sonido y efectos.\nIMPORTANTE\n*descarga de videos en el momento del evento\nSIN INTERNET\nConsultar precio para el interior de la provincia.\nComunicate con nosotros consulta por fechas disponibles al\n📱 3856982035\n📱 3855059240",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "2273305313e697e7749bad0efa537a8b"
+        },
+        {
+          "ref": "key_8e811572-5cde-4acf-97d3-e5cf43e2bb8d",
+          "keyword": [
+            "cabina",
+            "cabina fotografica",
+            "cabina de fotos"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "a3d6d02be6e527a32b417ffdaf20ebbd"
+        },
+        {
+          "ref": "ans_608f7c93-b7fd-4d27-9b96-f6da9d574787",
+          "keyword": "key_8e811572-5cde-4acf-97d3-e5cf43e2bb8d",
+          "answer": "Cabina Fotografica\nImpresiones de alta calidad\nDos copias: una para el dueño del evento y otra para los invitados\nMáxima responsabilidad y confianza\nConsultar precio para el interior de la provincia.\nComunicate con nosotros consulta por fechas disponibles al\n📱 3856982035\n📱 3855059240",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "233b27f94a56626f25c6e3ecce78cfbd"
+        },
+        {
+          "ref": "key_5210b84c-1582-4ff0-bba9-97623cbfc55d",
+          "keyword": [
+            "recepcion",
+            "recepción",
+            "ReceptorQR",
+            "recepcionQR"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "38c2be645a8cf13e08d0072225910fb1"
+        },
+        {
+          "ref": "ans_38b579bc-c2e3-4b88-8a74-35a1490385cc",
+          "keyword": "key_5210b84c-1582-4ff0-bba9-97623cbfc55d",
+          "answer": "Recepción QR\nCuando ingresas a la fiesta, se escanea un código QR para indicarte dónde ubicarte.\nComunicate con nosotros consulta por fechas disponibles al\n📱 3856982035\n📱 3855059240",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "3e41b5210cf11a23e440227084242657"
+        }
+      ],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "025099b8654d01ad5cf9e517cb33306c",
+    "from": "5493854870516"
+  },
+  {
+    "ref": "ee8daad7-5bec-4222-b122-ad36a42ca8dc",
+    "keyword": null,
+    "answer": "*Plataforma360*",
+    "options": {
+      "media": "https://th.bing.com/th/id/OIG.1xsc_xcGeXEZYVyiz2WM?pid=ImgGn",
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493854870516",
+    "refSerialize": "d38ef6ca329dca060d7f5d91b395bda1"
+  },
+  {
+    "ref": "bca8b99e-3c14-4260-913c-c2e4723e4bbf",
+    "keyword": null,
+    "answer": "*Cabina Fotografica*",
+    "options": {
+      "media": "https://th.bing.com/th/id/OIG.x1T9jpSriFD8Nv1.ZBWw?pid=ImgGn",
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493854870516",
+    "refSerialize": "2a29036cf0d538f3a31926efed20917d"
+  },
+  {
+    "ref": "df567eef-ab49-4d3b-b9e5-9d518e97b140",
+    "keyword": null,
+    "answer": "*RecepcionQR*",
+    "options": {
+      "media": "https://th.bing.com/th/id/OIG.CoyN.eiFg23P3APaxvni?pid=ImgGn",
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493854870516",
+    "refSerialize": "344197efe1de0059888b2d136f83a7ae"
+  },
+  {
+    "ref": "4d07568e-d61c-474d-b4c2-90268d31a045",
+    "keyword": "025099b8654d01ad5cf9e517cb33306c",
+    "answer": "Recepción",
+    "options": {},
+    "from": "5493854870516",
+    "refSerialize": "181b2d972f6347ba740fe577fb4cc0ff"
+  },
+  {
+    "ref": "ans_38b579bc-c2e3-4b88-8a74-35a1490385cc",
+    "keyword": "key_5210b84c-1582-4ff0-bba9-97623cbfc55d",
+    "answer": "Recepción QR\nCuando ingresas a la fiesta, se escanea un código QR para indicarte dónde ubicarte.\nComunicate con nosotros consulta por fechas disponibles al\n📱 3856982035\n📱 3855059240",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "3e41b5210cf11a23e440227084242657",
+    "from": "5493854870516"
+  }
+]

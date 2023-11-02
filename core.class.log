@@ -1,0 +1,99 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493854870516@s.whatsapp.net',
+    fromMe: false,
+    id: '146BB835C9F87B68FE45BA3C69DB3B3A',
+    participant: undefined
+  },
+  messageTimestamp: 1698929145,
+  pushName: 'Carla Carrizo',
+  broadcast: false,
+  message: Message {
+    conversation: 'Buenas',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Buenas',
+  from: '5493854870516'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f114c593-7743-44ed-bf97-f6409fd06db1',
+  keyword: 'key_b2b2b1a4-3198-48f1-b455-87f3243f0722',
+  answer: '🌟 Bienvenido a Rayuela 360\n' +
+    '🤔 ¿Qué servicio te gustaría obtener más información?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'c46a8f713a92f5da81aadbfd1600a584'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_7569865c-6fdb-41e4-a797-6b670f8db8dc',
+  keyword: 'ans_f114c593-7743-44ed-bf97-f6409fd06db1',
+  answer: 'Escribe que es lo que te estaria interesando',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 3000,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '025099b8654d01ad5cf9e517cb33306c'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493854870516@s.whatsapp.net',
+    fromMe: false,
+    id: 'C3139D0F4CF2F037BF98C1F1DD3019AC',
+    participant: undefined
+  },
+  messageTimestamp: 1698929173,
+  pushName: 'Carla Carrizo',
+  broadcast: false,
+  message: Message {
+    conversation: 'Recepción',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Recepción',
+  from: '5493854870516'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_38b579bc-c2e3-4b88-8a74-35a1490385cc',
+  keyword: 'key_5210b84c-1582-4ff0-bba9-97623cbfc55d',
+  answer: 'Recepción QR\n' +
+    'Cuando ingresas a la fiesta, se escanea un código QR para indicarte dónde ubicarte.\n' +
+    'Comunicate con nosotros consulta por fechas disponibles al\n' +
+    '📱 3856982035\n' +
+    '📱 3855059240',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '3e41b5210cf11a23e440227084242657'
+}
