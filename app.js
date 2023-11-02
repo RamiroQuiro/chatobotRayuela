@@ -1,3 +1,8 @@
+
+const OpenAI = require("openai");
+
+const openai = new OpenAI({apiKey:'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'});
+
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
@@ -133,6 +138,13 @@ const flowPrincipal=addKeyword(['hola','ola','hey','que hay','man', 'buenas','bu
 const flowSecundario=addKeyword('gracias').addAnswer('de nada')
 
 const main = async () => {
+const completion=await openai.chat.completions.create({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "system", content: "You are a helpful assistant." }],
+});
+
+console.log(completion.choices)
+
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowPrincipal,flowSecundario])
     const adapterProvider = createProvider(BaileysProvider)

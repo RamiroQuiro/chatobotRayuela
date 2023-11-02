@@ -12,15 +12,16 @@
         "@bot-whatsapp/bot": "latest",
         "@bot-whatsapp/cli": "latest",
         "@bot-whatsapp/database": "latest",
-        "@bot-whatsapp/provider": "latest",
         "@bot-whatsapp/portal": "latest",
-        "mime-types": "2.1.35",
+        "@bot-whatsapp/provider": "latest",
         "@whiskeysockets/baileys": "^6.4.0",
+        "mime-types": "2.1.35",
+        "openai": "^4.14.2",
         "wa-sticker-formatter": "4.3.2"
     },
     "devDependencies": {
-        "eslint-plugin-bot-whatsapp": "latest",
-        "eslint": "^8.52.0"
+        "eslint": "^8.52.0",
+        "eslint-plugin-bot-whatsapp": "latest"
     },
     "author": "",
     "license": "ISC"
