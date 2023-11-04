@@ -1,8 +1,6 @@
 const OpenAI = require("openai");
 
-const openai = new OpenAI({
-  apiKey: "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",
-});
+
 
 const {
   createBot,

@@ -5,7 +5,7 @@
     "main": "app.js",
     "scripts": {
         "pre-copy": "cd .. && npm run  copy.lib base-baileys-json",
-        "start": "node app.js"
+        "start": "node --env-file .env app.js"
     },
     "keywords": [],
     "dependencies": {
