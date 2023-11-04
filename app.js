@@ -1,17 +1,31 @@
-
 const OpenAI = require("openai");
 
-const openai = new OpenAI({apiKey:'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'});
+const openai = new OpenAI({
+  apiKey: "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",
+});
 
-const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
+const {
+  createBot,
+  createProvider,
+  createFlow,
+  addKeyword,
+} = require("@bot-whatsapp/bot");
 
-const QRPortalWeb = require('@bot-whatsapp/portal')
+const QRPortalWeb = require("@bot-whatsapp/portal");
+
+
 // prooverdor de whatsapp
-const BaileysProvider = require('@bot-whatsapp/provider/baileys')
-
+const BaileysProvider = require("@bot-whatsapp/provider/baileys");
 
 // base de datos para el flujo
-const JsonFileAdapter = require('@bot-whatsapp/database/json')
+const JsonFileAdapter = require("@bot-whatsapp/database/json");
+const ChatGPTClass = require("./chatgpt.class");
+
+
+const createBotGPT=async=({provider,database})=>{
+    return new ChatGPTClass(database,provider)
+}
+
 
 // const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
@@ -73,89 +87,113 @@ const JsonFileAdapter = require('@bot-whatsapp/database/json')
 
 // flujo hijos
 
-const flowPlataforma = addKeyword(['plataforma360', 'plataforma']).addAnswer(
-    [
-        'Rayuela 360',
-        'Plataforma de vídeo!!',
-        '* Servicio de 2 hs.',
-        '* Camara alta calidad',
-        '* Videos cortos especial redes sociales.',
-        '* Videos ilimitados.',
-        '* Sonido y efectos.',
-        'IMPORTANTE',
-        '*descarga de videos en el momento del evento',
-        'SIN INTERNET',
-        'Consultar precio para el interior de la provincia.',
-        'Comunicate con nosotros consulta por fechas disponibles al',
-        '📱 3856982035',
-        '📱 3855059240'
-    ]
-)
-const flowCabina=addKeyword(['cabina','cabina fotografica','cabina de fotos',]).addAnswer(
-    [
-        'Cabina Fotografica',
-        'Impresiones de alta calidad',
-        'Dos copias: una para el dueño del evento y otra para los invitados',
-        'Máxima responsabilidad y confianza',
-        'Consultar precio para el interior de la provincia.',
-        'Comunicate con nosotros consulta por fechas disponibles al',
-        '📱 3856982035',
-        '📱 3855059240'
-    ]
-
-)
-const flowRecepcionQR=addKeyword(['recepcion','recepción','ReceptorQR','recepcionQR']).addAnswer([
-        'Recepción QR',
-        'Cuando ingresas a la fiesta, se escanea un código QR para indicarte dónde ubicarte.',
-        'Comunicate con nosotros consulta por fechas disponibles al',
-        '📱 3856982035',
-        '📱 3855059240'
-    ]
-)
-
-
+const flowPlataforma = addKeyword(["plataforma360", "plataforma"]).addAnswer([
+  "Rayuela 360",
+  "Plataforma de vídeo!!",
+  "* Servicio de 2 hs.",
+  "* Camara alta calidad",
+  "* Videos cortos especial redes sociales.",
+  "* Videos ilimitados.", 
+  "* Sonido y efectos.",
+  "IMPORTANTE",
+  "*descarga de videos en el momento del evento",
+  "SIN INTERNET",
+  "Consultar precio para el interior de la provincia.",
+  "Comunicate con nosotros consulta por fechas disponibles al",
+  "📱 3856982035",
+  "📱 3855059240",
+]);
+const flowCabina = addKeyword([
+  "cabina",
+  "cabina fotografica",
+  "cabina de fotos",
+]).addAnswer([
+  "Cabina Fotografica",
+  "Impresiones de alta calidad",
+  "Dos copias: una para el dueño del evento y otra para los invitados",
+  "Máxima responsabilidad y confianza",
+  "Consultar precio para el interior de la provincia.",
+  "Comunicate con nosotros consulta por fechas disponibles al",
+  "📱 3856982035",
+  "📱 3855059240",
+]);
+const flowRecepcionQR = addKeyword([
+  "recepcion",
+  "recepción",
+  "ReceptorQR",
+  "recepcionQR",
+]).addAnswer([
+  "Recepción QR",
+  "Cuando ingresas a la fiesta, se escanea un código QR para indicarte dónde ubicarte.",
+  "Comunicate con nosotros consulta por fechas disponibles al",
+  "📱 3856982035",
+  "📱 3855059240",
+]);
 
 // mi flujo principal
 
-const flowPrincipal=addKeyword(['hola','ola','hey','que hay','man', 'buenas','buenos dias'])
-.addAnswer(['🌟 Bienvenido a Rayuela 360', '🤔 ¿Qué servicio te gustaría obtener más información?','Espere mientras cargan las imagenes'],null,(ctx,{flowDynamic})=>{
-    flowDynamic([{
-        body:'*Plataforma360*',
-        media:'https://th.bing.com/th/id/OIG.1xsc_xcGeXEZYVyiz2WM?pid=ImgGn'
-    },{
-        body:'*Cabina Fotografica*',
-        media:'https://th.bing.com/th/id/OIG.x1T9jpSriFD8Nv1.ZBWw?pid=ImgGn'
+const flowPrincipal = addKeyword([
+  "hola",
+  "ola",
+  "hey",
+  "que hay",
+  "man",
+  "buenas",
+  "buenos dias",
+])
+  .addAnswer(
+    [
+      "🌟 Bienvenido a Rayuela 360",
+      "🤔 ¿Qué servicio te gustaría obtener más información?",
+      "Espere mientras cargan las imagenes",
+    ],
+    null,
+    (ctx, { flowDynamic }) => {
+      flowDynamic([
+        {
+          body: "*Plataforma360*",
+          media: "https://th.bing.com/th/id/OIG.1xsc_xcGeXEZYVyiz2WM?pid=ImgGn",
+        },
+        {
+          body: "*Cabina Fotografica*",
+          media: "https://th.bing.com/th/id/OIG.x1T9jpSriFD8Nv1.ZBWw?pid=ImgGn",
+        },
+        {
+          body: "*RecepcionQR*",
+          media: "https://th.bing.com/th/id/OIG.CoyN.eiFg23P3APaxvni?pid=ImgGn",
+        },
+      ]);
     }
-    ,{
-        body:'*RecepcionQR*',
-        media:'https://th.bing.com/th/id/OIG.CoyN.eiFg23P3APaxvni?pid=ImgGn'
-    }])
-})
-.addAnswer('Escribe que es lo que te estaria interesando',{delay:3000},null,[flowPlataforma,flowCabina,flowRecepcionQR])
+  )
+  .addAnswer(
+    "Escribe que es lo que te estaria interesando",
+    { delay: 3000 },
+    null,
+    [flowPlataforma, flowCabina, flowRecepcionQR]
+  );
+
+const flowSecundario = addKeyword("gracias").addAnswer("de nada");
 
 
-
-const flowSecundario=addKeyword('gracias').addAnswer('de nada')
 
 const main = async () => {
-const completion=await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
-    messages: [{ role: "system", content: "You are a helpful assistant." }],
-});
 
-console.log(completion.choices)
+  const adapterDB = new JsonFileAdapter();
+  const adapterFlow = createFlow([flowPrincipal, flowSecundario]);
+  const adapterProvider = createProvider(BaileysProvider);
 
-    const adapterDB = new JsonFileAdapter()
-    const adapterFlow = createFlow([flowPrincipal,flowSecundario])
-    const adapterProvider = createProvider(BaileysProvider)
 
-    createBot({
-        flow: adapterFlow,
-        provider: adapterProvider,
-        database: adapterDB,
-    })
+  createBotGPT({
+    provider:adapterProvider,
+    database:adapterDB
+  })
+//   createBot({
+//     flow: adapterFlow,
+//     provider: adapterProvider,
+//     database: adapterDB,
+//   });
 
-    QRPortalWeb()
-}
+  QRPortalWeb();
+};
 
-main()
+main();
